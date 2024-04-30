@@ -1,0 +1,136 @@
+{
+  "intents": [
+      {
+          "tag": "greeting",
+          "patterns": [
+              "Hi",
+              "Hello",
+              "Hey",
+              "Good morning",
+              "Good afternoon"
+          ],
+          "responses": [
+              "Hello, how can I assist you today?",
+              "Hi there, what can I do for you?",
+              "Hey! How can I help you today?"
+          ]
+      },
+      {
+          "tag": "goodbye",
+          "patterns": [
+              "Bye",
+              "See you later",
+              "Goodbye"
+          ],
+          "responses": [
+              "Goodbye! Have a nice day.",
+              "See you later! Let me know if there's anything else I can help with.",
+              "Bye! Don't hesitate to ask if you have more questions."
+          ]
+      },
+      {
+          "tag": "graduation_date",
+          "patterns": [
+              "When is graduation?",
+              "Graduation date",
+              "What day is graduation?"
+          ],
+          "responses": [
+              "Graduation is scheduled for May 18, 2024."
+          ]
+      },
+      {
+        "tag": "semester_start",
+        "patterns": [
+            "When does the semester start?",
+            "Start of semester",
+            "When do classes begin?"
+        ],
+        "responses": [
+            "Are you asking about HVAC classes or other programs?"
+        ],
+        "context_set": "asking_for_class_type"
+    },
+    {
+        "tag": "semester_start_hvac",
+        "patterns": [
+            "HVAC",
+            "HVAC classes",
+            "HVAC program"
+        ],
+        "responses": [
+            "HVAC classes for the Spring Semester 2024 begin on January 2, 2024."
+        ],
+        "context_filter": "asking_for_class_type"
+    },
+    {
+        "tag": "semester_start_other",
+        "patterns": [
+            "Other programs",
+            "other classes",
+            "non-HVAC",
+            "other majors"
+        ],
+        "responses": [
+            "For all other programs, classes begin on January 16, 2024."
+        ],
+        "context_filter": "asking_for_class_type"
+    },
+      {
+          "tag": "semester_end",
+          "patterns": [
+              "When does the semester end?",
+              "End of semester",
+              "When do classes end?"
+          ],
+          "responses": [
+              "Classes for the Spring Semester 2024 end on May 7, 2024."
+          ]
+      },
+      {
+        "tag": "events_on_specific_date",
+        "patterns": [
+            "What events are happening on January 16, 2024?",
+            "Any events on January 16, 2024?",
+            "What's the schedule for January 16, 2024?"
+        ],
+        "responses": [
+            "On January 16, 2024, Check In Day, SYE, and FYE classes begin."
+        ]
+    },
+    {
+        "tag": "holiday",
+        "patterns": [
+            "What holiday is on February 19, 2024?",
+            "Is February 19, 2024 a holiday?",
+            "What's special about February 19, 2024?"
+        ],
+        "responses": [
+            "February 19, 2024 is President's Day."
+        ]
+    },
+    {
+        "tag": "career_fair",
+        "patterns": [
+            "Tell me about the Career Fair on April 9, 2024.",
+            "Any special events on April 9, 2024?",
+            "What's happening on April 9, 2024?"
+        ],
+        "responses": [
+            "The Career Fair (no classes) is on April 9, 2024."
+        ]
+    },
+      {
+          "tag": "registration_dates",
+          "patterns": [
+              "When does registration start?",
+              "Registration dates",
+              "When can I register for summer classes?",
+              "When can I register for fall classes?"
+          ],
+          "responses": [
+              "Registration for both summer and fall classes begins on April 1, 2024."
+          ]
+      }
+  ]
+}
